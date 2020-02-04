@@ -5,7 +5,7 @@
   <parent>
     <groupId>de.maggu2810.osgi.openjfx</groupId>
     <artifactId>openjfx-osgi</artifactId>
-    <version>11.0.2-SNAPSHOT</version>
+    <version>11.0.2.m1</version>
   </parent>
 
   <artifactId>openjfx.media.win32_64</artifactId>
