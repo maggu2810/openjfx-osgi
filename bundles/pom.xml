@@ -4,7 +4,7 @@
 
   <groupId>de.maggu2810.osgi.openjfx</groupId>
   <artifactId>openjfx-osgi</artifactId>
-    <version>11.0.2.m1</version>
+    <version>11.0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -27,7 +27,7 @@
     <connection>scm:git:git@github.com:maggu2810/openjfx-osgi.git</connection>
     <developerConnection>scm:git:git@github.com:maggu2810/openjfx-osgi.git</developerConnection>
     <url>https://github.com/maggu2810/openjfx-osgi</url>
-    <tag>openjfx-osgi-11.0.2.m1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <issueManagement>
