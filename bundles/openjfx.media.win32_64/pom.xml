@@ -10,26 +10,12 @@
 
   <artifactId>openjfx.media.win32_64</artifactId>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <configuration>
-          <artifactItems>
-            <artifactItem>
-              <groupId>org.openjfx</groupId>
-              <artifactId>javafx-media</artifactId>
-              <version>${openjfx.version}</version>
-              <classifier>win</classifier>
-              <type>jar</type>
-              <outputDirectory>${project.build.directory}/classes</outputDirectory>
-              <destFileName>javafx.media.jar</destFileName>
-            </artifactItem>
-          </artifactItems>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  <properties>
+    <wrapped.groupId>org.openjfx</wrapped.groupId>
+    <wrapped.artifactId>javafx-media</wrapped.artifactId>
+    <wrapped.version>${openjfx.version}</wrapped.version>
+    <wrapped.classifier>win</wrapped.classifier>
+    <wrapped.destFileName>javafx.media.jar</wrapped.destFileName>
+  </properties>
 
 </project>

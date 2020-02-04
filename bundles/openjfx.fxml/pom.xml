@@ -10,26 +10,12 @@
 
   <artifactId>openjfx.fxml</artifactId>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <configuration>
-          <artifactItems>
-            <artifactItem>
-              <groupId>org.openjfx</groupId>
-              <artifactId>javafx-fxml</artifactId>
-              <version>${openjfx.version}</version>
-              <classifier>mac</classifier>
-              <type>jar</type>
-              <outputDirectory>${project.build.directory}/classes</outputDirectory>
-              <destFileName>javafx.fxml.jar</destFileName>
-            </artifactItem>
-          </artifactItems>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  <properties>
+    <wrapped.groupId>org.openjfx</wrapped.groupId>
+    <wrapped.artifactId>javafx-fxml</wrapped.artifactId>
+    <wrapped.version>${openjfx.version}</wrapped.version>
+    <wrapped.classifier>mac</wrapped.classifier>
+    <wrapped.destFileName>javafx.fxml.jar</wrapped.destFileName>
+  </properties>
 
 </project>
