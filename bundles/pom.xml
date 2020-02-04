@@ -377,52 +377,52 @@
                   </artifactItems>
                 </configuration>
               </execution>
-              <execution>
-                <id>copy-wrapped-sources</id>
-                <goals>
-                  <goal>copy</goal>
-                </goals>
-                <phase>package</phase>
-                <configuration>
-                  <artifactItems>
-                    <artifactItem>
-                      <groupId>${wrapped.groupId}</groupId>
-                      <artifactId>${wrapped.artifactId}</artifactId>
-                      <version>${wrapped.version}</version>
-                      <classifier>sources</classifier>
-                      <type>jar</type>
-                      <destFileName>sources.jar</destFileName>
-                      <outputDirectory>${project.build.directory}/attach</outputDirectory>
-                    </artifactItem>
-                  </artifactItems>
-                  <overWriteReleases>false</overWriteReleases>
-                  <overWriteSnapshots>true</overWriteSnapshots>
-                </configuration>
-              </execution>
+              <!-- <execution> -->
+              <!-- <id>copy-wrapped-sources</id> -->
+              <!-- <goals> -->
+              <!-- <goal>copy</goal> -->
+              <!-- </goals> -->
+              <!-- <phase>package</phase> -->
+              <!-- <configuration> -->
+              <!-- <artifactItems> -->
+              <!-- <artifactItem> -->
+              <!-- <groupId>${wrapped.groupId}</groupId> -->
+              <!-- <artifactId>${wrapped.artifactId}</artifactId> -->
+              <!-- <version>${wrapped.version}</version> -->
+              <!-- <classifier>sources</classifier> -->
+              <!-- <type>jar</type> -->
+              <!-- <destFileName>sources.jar</destFileName> -->
+              <!-- <outputDirectory>${project.build.directory}/attach</outputDirectory> -->
+              <!-- </artifactItem> -->
+              <!-- </artifactItems> -->
+              <!-- <overWriteReleases>false</overWriteReleases> -->
+              <!-- <overWriteSnapshots>true</overWriteSnapshots> -->
+              <!-- </configuration> -->
+              <!-- </execution> -->
             </executions>
           </plugin>
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>build-helper-maven-plugin</artifactId>
-            <executions>
-              <execution>
-                <id>attach-artifacts</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>attach-artifact</goal>
-                </goals>
-                <configuration>
-                  <artifacts>
-                    <artifact>
-                      <file>${project.build.directory}/attach/sources.jar</file>
-                      <type>jar</type>
-                      <classifier>sources</classifier>
-                    </artifact>
-                  </artifacts>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
+          <!-- <plugin> -->
+          <!-- <groupId>org.codehaus.mojo</groupId> -->
+          <!-- <artifactId>build-helper-maven-plugin</artifactId> -->
+          <!-- <executions> -->
+          <!-- <execution> -->
+          <!-- <id>attach-artifacts</id> -->
+          <!-- <phase>package</phase> -->
+          <!-- <goals> -->
+          <!-- <goal>attach-artifact</goal> -->
+          <!-- </goals> -->
+          <!-- <configuration> -->
+          <!-- <artifacts> -->
+          <!-- <artifact> -->
+          <!-- <file>${project.build.directory}/attach/sources.jar</file> -->
+          <!-- <type>jar</type> -->
+          <!-- <classifier>sources</classifier> -->
+          <!-- </artifact> -->
+          <!-- </artifacts> -->
+          <!-- </configuration> -->
+          <!-- </execution> -->
+          <!-- </executions> -->
+          <!-- </plugin> -->
         </plugins>
       </build>
     </profile>
